@@ -1,0 +1,107 @@
+@import "../../assets/style/variable.module.scss";
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 150px;
+
+  .cardWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 25px;
+
+    .card {
+      border: 3px solid #f3c785; /* Belirgin çerçeve rengi */
+      position: relative;
+      border-radius: 50px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15), /* Çift katmanlı gölge */
+                  8px 8px 15px rgba(0, 0, 0, 0.1);
+      transition: border 0.3s ease, box-shadow 0.3s ease; /* Hover efekti için geçişler */
+
+      .cover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 140, 0, 0.8); /* Turuncu hover rengi (opaklık ayarlandı) */
+        z-index: 1;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: all 0.5s ease;
+
+        p {
+          position: absolute;
+          bottom: 20px;
+          z-index: 2;
+          font-size: 30px;
+          text-align: center;
+          max-width: 80%;
+          font-weight: 700;
+          color: white;
+        }
+      }
+
+      &:hover {
+        .cover {
+          opacity: 1;
+        }
+        border-color: #e6b366; /* Hoverda çerçeve rengini hafifçe koyulaştır */
+        box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.2), /* Hoverda daha belirgin gölge */
+                    10px 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: opacity 0.3s ease; /* Hoverda resim solması için geçiş */
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .wrapper {
+    max-width: 900px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .wrapper {
+    margin-top: 75px;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    .cardWrapper {
+      grid-template-columns: 1fr 1fr;
+
+      .card {
+        border-radius: 25px;
+        border: 3px solid #f3c785; /* Mobil görünümde de belirgin çerçeve */
+        box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15), /* Mobil için daha hafif çift katmanlı gölge */
+                    6px 6px 12px rgba(0, 0, 0, 0.1);
+
+        .cover {
+          p {
+            font-size: 22px;
+          }
+        }
+
+        &:hover {
+          border-color: #e6b366; /* Mobil hoverda çerçeve rengi */
+          box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), /* Mobil hoverda gölge */
+                      8px 8px 15px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+@import "../../assets/style/variable.module.scss";
+
+.wrapper {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 220px;
+  box-sizing: border-box;
+}
+
+.hero {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 1200px;
+
+  .left {
+    h1 {
+      font-size: 72px;
+      color: #434343;
+      line-height: 85px;
+
+      span {
+        color: #282828;
+        font-weight: 800;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 25px;
+      max-width: 550px;
+      margin-top: 12px;
+      color: #4f4f4f;
+    }
+
+    .buttonWrapper {
+      display: flex;
+      margin-top: 60px;
+      gap: 12px;
+
+      a {
+        font-weight: 700;
+        padding: 11px 28px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        text-decoration: none; /* Bağlantı alt çizgisini kaldır */
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border 0.2s ease-in-out, background-color 0.2s ease-in-out; /* Çerçeve ve arka plan geçişi eklendi */
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15); /* Sayfa yüklendiğindeki hafif gölge */
+        border: 2px solid transparent; /* Başlangıçta şeffaf çerçeve */
+      }
+
+      a:hover { /* Her bir butonun kendi hover stili */
+        transform: translateY(-3px); /* Yukarı doğru hafifçe hareket etme */
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25); /* Daha belirgin hover gölgesi */
+      }
+
+      a.primary {
+        background: $--primary-blue;
+        color: white;
+        border-color: darken($--primary-blue, 20%); /* Başlangıç çerçeve rengi */
+      }
+
+      a.primary:hover {
+        background: darken($--primary-blue, 10%);
+        border-color: darken($--primary-blue, 30%); /* Hover çerçeve rengi */
+      }
+
+      a.secondary {
+        background: $--primary-orange;
+        color: white;
+        border-color: darken($--primary-orange, 20%); /* Başlangıç çerçeve rengi */
+      }
+
+      a.secondary:hover {
+        background: darken($--primary-orange, 10%);
+        border-color: darken($--primary-orange, 30%); /* Hover çerçeve rengi */
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .wrapper {
+    .hero {
+      max-width: 900px;
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .wrapper {
+    padding: 0 20px;
+    box-sizing: border-box;
+    padding-top: 180px;
+
+    .hero {
+      flex-direction: column-reverse;
+      gap: 20px;
+      .left {
+        h1 {
+          text-align: center;
+          font-size: 42px;
+          line-height: 52px;
+        }
+
+        p {
+          text-align: center;
+        }
+
+        .buttonWrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          margin-top: 30px;
+        }
+      }
+
+      .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          height: 300px;
+        }
+      }
+    }
+  }
+}

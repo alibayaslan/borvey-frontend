@@ -1,0 +1,36 @@
+@import "../../../assets/style/variable.module.scss";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 60px;
+
+  h2 {
+    text-align: center;
+    font-size: 46px;
+    color: #2c2c2c;
+    font-weight: 700;
+  }
+
+  p {
+    text-align: center;
+    max-width: 860px;
+    color: #646464;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .wrapper {
+    margin-bottom: 30px;
+    h2 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,166 @@
+@import "../../assets/style/variable.module.scss";
+
+.wrapper {
+  .postCard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fafafa;
+      border: 1px solid #e6e6e6;
+      box-sizing: border-box;
+      padding: 24px;
+      border-radius: 12px 12px 0 0;
+
+      .topButtonWrapper {
+        display: flex;
+        gap: 10px;
+      }
+
+      .info {
+        display: flex;
+        gap: 24px;
+
+        img {
+          width: 50px;
+          height: 50px;
+          border: 1px solid #e6e6e6;
+          border-radius: 50%;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        .title {
+          h5 {
+            font-size: 16px;
+            color: $--title-color;
+            font-weight: 700;
+          }
+
+          h6 {
+            font-size: 16px;
+            color: $--subtitle-color;
+            font-weight: 500;
+          }
+        }
+      }
+
+      button {
+        color: white;
+        font-size: 14px;
+        font-weight: 800;
+        padding: 6px 12px;
+        background: $--primary-orange;
+        border-radius: 8px;
+      }
+    }
+
+    .content {
+      border-radius: 0 0 12px 12px;
+      border: 1px solid #e6e6e6;
+      margin-top: -1px;
+      padding: 24px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      p {
+        font-size: 18px;
+        color: $--subtitle-color;
+        width: 100%;
+      }
+
+      .cardWrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 24px;
+
+        .card {
+          width: 48%;
+          background: #efefef;
+          border: 1px solid #e6e6e6;
+          padding: 6px 12px;
+          box-sizing: border-box;
+          border-radius: 8px;
+          display: flex;
+          gap: 6px;
+
+          .info {
+            p {
+              font-size: 12px;
+              color: $--subtitle-color;
+            }
+
+            h6 {
+              font-size: 16px;
+              color: $--title-color;
+              font-weight: 700;
+            }
+          }
+
+          &:nth-child(2) {
+            .info {
+              h6 {
+                color: $--primary-blue;
+              }
+            }
+          }
+
+          &:nth-child(3) {
+            .info {
+              h6 {
+                color: $--primary-orange;
+              }
+            }
+          }
+        }
+
+        .fullCard {
+          width: 100%;
+          background: #efefef;
+          border: 1px solid #e6e6e6;
+          padding: 16px 12px;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 8px;
+
+          svg {
+            height: 20px;
+            width: 30px;
+            margin-right: 10px;
+          }
+
+          span {
+            color: $--title-color;
+            font-size: 14px;
+            font-weight: 800;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .wrapper {
+    .postCard {
+      .content {
+        .cardWrapper {
+          .card {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

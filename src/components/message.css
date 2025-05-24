@@ -1,0 +1,32 @@
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+
+  &::-webkit-scrollbar { 
+    display: none; /* Safari and Chrome */
+  }
+}
+
+.bg-blue-500 {
+  background-color: #4299e1; /* Tailwind's blue-500 */
+}
+
+.bg-gray-300 {
+  background-color: #e2e8f0; /* Tailwind's gray-300 */
+}
+
+.p-2 {
+  padding: 0.5rem; /* Tailwind's p-2 */
+}
+.rounded-lg {
+  border-radius: 0.5rem; /* Tailwind's rounded-lg */
+}
+
+.text-white {
+  color: #fff; /* Tailwind's text-white */
+}
+
+.text-black {
+  color: #000; /* Tailwind's text-black */
+}
+  

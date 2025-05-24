@@ -1,0 +1,184 @@
+@import "../../assets/style/variable.module.scss";
+
+.container {
+  width: 100%;
+  background: $--background-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 200px;
+  padding-bottom: 110px; /* İletişim kutucukları ile footer arasına 110 piksel boşluk eklendi */
+
+  .wrapper {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-size: 32px;
+      color: $--title-color;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: $--subtitle-color;
+      font-weight: 500;
+      margin-top: 12px;
+    }
+
+    .card {
+      margin-top: 40px;
+      width: 100%;
+      background: white;
+      border-radius: 10px;
+      padding: 40px;
+      box-sizing: border-box;
+      display: flex;
+      gap: 40px;
+
+      .contactCard {
+        background: rgba($color: #306fdf, $alpha: 0.05);
+        border: 1px solid #e8eef8;
+        width: 40%;
+        padding: 30px;
+        box-sizing: border-box;
+        border-radius: 10px;
+
+        h5 {
+          font-size: 24px;
+          color: $--title-color;
+          font-weight: 600;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          margin-top: 24px;
+
+          li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            .iconWrapper {
+              background: white;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+
+            p {
+              color: $--subtitle-color;
+            }
+
+            .linkWrapper {
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+
+              a {
+                color: $--primary-blue;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+
+      .formWrapper {
+        width: 60%;
+
+        form {
+          width: 100%;
+
+          .submit {
+            padding: 17px 75px;
+            color: white;
+            background: $--primary-blue;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 12px;
+          }
+
+          .success {
+            background: #34c759;
+          }
+
+          .input {
+            width: 100%;
+          }
+
+          .inputWrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            align-items: flex-end;
+
+            .formSplit {
+              display: flex;
+              gap: 24px;
+              width: 100%;
+
+              .input {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                span {
+                  color: #b3261e;
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .container {
+    padding-top: 150px;
+    padding-bottom: 80px; /* Mobil görünüm için alt boşluk */
+    .wrapper {
+      padding: 0 25px;
+
+      .subtitle {
+        text-align: center;
+      }
+
+      .card {
+        flex-direction: column;
+        padding: 24px;
+
+        .contactCard {
+          width: 100%;
+        }
+
+        .formWrapper {
+          width: 100%;
+
+          form {
+            .submit {
+              width: 100%;
+            }
+            .inputWrapper {
+              .formSplit {
+                flex-direction: column;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

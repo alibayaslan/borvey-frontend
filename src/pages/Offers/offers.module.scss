@@ -1,0 +1,354 @@
+@import "../../assets/style/variable.module.scss";
+@import "../../assets/style/variable.module.scss";
+
+.wrapper {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .topSwitch {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+
+    button {
+      color: #637381;
+      font-size: 14px;
+      font-weight: 500;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .active {
+      color: $--title-color;
+      font-weight: 700;
+      border-bottom: 3px solid $--title-color;
+    }
+  }
+
+  .workWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .workCard {
+    background: #fafafa;
+    width: 100%;
+    margin-top: 24px;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+    .left {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        .title {
+          display: flex;
+          align-items: center;
+          gap: 24px;
+
+          h6 {
+            font-weight: 800;
+            color: $--title-color;
+            font-size: 18px;
+          }
+
+          svg {
+            width: 30px;
+            height: 20px;
+          }
+        }
+
+        .badge {
+          display: flex;
+          gap: 10px;
+
+          span {
+            background: #efefef;
+            border: 1px solid #e6e6e6;
+            padding: 10px 12px;
+            font-size: 12px;
+            color: $--title-color;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+
+    .content {
+      p {
+        color: $--subtitle-color;
+        font-size: 16px;
+        font-weight: 400;
+        max-width: 800px;
+      }
+    }
+
+    .bottom {
+      display: flex;
+      gap: 12px;
+      width: 100%;
+
+      .bottomLeft {
+        display: flex;
+        gap: 12px;
+      }
+
+      .card {
+        background: #efefef;
+        border: 1px solid #e6e6e6;
+        padding: 6px 12px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        display: flex;
+        gap: 6px;
+
+        .info {
+          p {
+            font-size: 12px;
+            color: $--subtitle-color;
+          }
+
+          h6 {
+            font-size: 16px;
+            color: $--primary-blue;
+            font-weight: 700;
+          }
+        }
+
+        &:nth-child(2) {
+          .info {
+            h6 {
+              color: $--primary-orange;
+            }
+          }
+        }
+      }
+      .singleCard {
+        background: #efefef;
+        border: 1px solid #e6e6e6;
+        padding: 6px 12px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        svg {
+          height: 30px;
+          width: auto;
+        }
+
+        h6 {
+          font-size: 16px;
+          color: $--title-color;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .offerWrapper {
+      border: 1px solid #e6e6e6;
+      padding: 12px 18px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      background: white;
+      border-radius: 8px;
+
+      .offerInfo {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+        border-bottom: 1px solid #f7f7f7;
+
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+          object-position: center;
+          border: 1px solid #e6e6e6;
+        }
+
+        h6 {
+          font-size: 16px;
+          font-weight: 600;
+          color: $--title-color;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+
+          span {
+            color: $--primary-orange;
+            font-size: 24px;
+            font-weight: 700;
+          }
+        }
+      }
+
+      .offerBottom {
+        .price {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          p {
+            color: $--subtitle-color;
+            font-size: 14px;
+            font-weight: 600;
+          }
+          h5 {
+            color: $--title-color;
+            font-size: 30px;
+            font-weight: 700;
+          }
+        }
+
+        .sendMessage {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          padding: 6px 12px;
+          background: rgba($color: $--primary-orange, $alpha: 0.08);
+          color: $--primary-orange;
+          border-radius: 8px;
+          font-size: 14px;
+          font-weight: 700;
+          margin: 0 auto;
+          margin-top: 10px;
+
+          svg {
+            path {
+              fill: $--primary-orange;
+            }
+          }
+        }
+
+        .buttonWrapper {
+          display: flex;
+          gap: 8px;
+          margin-top: 12px;
+          margin-bottom: 12px;
+          button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            background: rgba($color: #b3261e, $alpha: 0.08);
+            color: #b3261e;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+
+            &:nth-child(2) {
+              background: rgba($color: #34c759, $alpha: 0.08);
+              color: #34c759;
+            }
+          }
+        }
+
+        .acceptStatus {
+          background: rgba($color: #34c759, $alpha: 0.08);
+          color: #34c759;
+          width: 100%;
+          display: flex;
+          padding: 12px;
+          gap: 10px;
+          border-radius: 8px;
+        }
+
+        .declineStatus {
+          background: rgba($color: #b3261e, $alpha: 0.08);
+          color: #b3261e;
+          width: 100%;
+          display: flex;
+          padding: 12px;
+          gap: 10px;
+          border-radius: 8px;
+        }
+
+        .detail {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          padding: 6px 12px;
+          background: rgba($color: #00b8d9, $alpha: 0.08);
+          color: #3366ff;
+          border-radius: 8px;
+          font-size: 14px;
+          font-weight: 700;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .wrapper {
+    .topSwitch {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      gap: 18px;
+
+      button {
+        white-space: nowrap;
+      }
+    }
+
+    .workCard {
+      flex-direction: column;
+      .top {
+        flex-direction: column-reverse;
+        gap: 20px;
+
+        .info {
+          .badge {
+            flex-wrap: wrap;
+          }
+        }
+
+        .buttonWrapper {
+          align-items: center;
+        }
+      }
+      .bottom {
+        flex-wrap: wrap;
+
+        .bottomLeft {
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}
