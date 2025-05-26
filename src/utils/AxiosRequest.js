@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import axios from "axios";
 import { ApiRoutes } from "./ApiRoutes";
-export const BASE_URL = "http://localhost:5050";
-// const BASE_URL = `https://borvey-backend-13d056a7e6c7.herokuapp.com/`;
+// export const BASE_URL = "http://localhost:5050";
+const BASE_URL = `https://borvey-backend-bb5ea81625dd.herokuapp.com`;
 
 
 export const AxiosRequest = (method, url, data) => {

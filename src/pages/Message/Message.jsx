@@ -297,13 +297,13 @@ const Message = () => {
     getMessageList();
   }, []);
 
-  // const { messages, status, sendMessage } = useWebSocket(
-  //   `wss://borvey-backend-13d056a7e6c7.herokuapp.com/connect?userId=${userInfo._id}`
-  // );
-
   const { messages, status, sendMessage } = useWebSocket(
-    `ws://localhost:5050/connect?userId=${userInfo._id}`
+    `wss://borvey-backend-bb5ea81625dd.herokuapp.com/connect?userId=${userInfo._id}`
   );
+
+  // const { messages, status, sendMessage } = useWebSocket(
+  //   `ws://localhost:5050/connect?userId=${userInfo._id}`
+  // );
   const handleKeyDown = (event) => {
     if (event.key === "Enter" && event.target.value && currentMessage) {
       // navigate(`/search?keyword=${word}`);
