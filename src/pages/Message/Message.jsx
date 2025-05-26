@@ -297,9 +297,12 @@ const Message = () => {
     getMessageList();
   }, []);
 
+  console.log("socketURL",process.env.REACT_APP_PUBLIC_URL)
+
   const { messages, status, sendMessage } = useWebSocket(
-    `wss://borvey-backend-13d056a7e6c7.herokuapp.com/connect?userId=${userInfo._id}`
+    `wss://${process.env.REACT_APP_PUBLIC_URL}/connect?userId=${userInfo._id}`
   );
+  console.log("STATUS",status)
 
   // const { messages, status, sendMessage } = useWebSocket(
   //   `ws://localhost:5050/connect?userId=${userInfo._id}`
