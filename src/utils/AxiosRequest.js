@@ -1,9 +1,8 @@
 /* eslint-disable no-unused-vars */
 import axios from "axios";
 import { ApiRoutes } from "./ApiRoutes";
-// export const BASE_URL = "http://localhost:5050";
-const BASE_URL = `https://${process.env.REACT_APP_PUBLIC_URL}/`;
-console.log("baseURL",BASE_URL)
+export const BASE_URL = "http://localhost:5050";
+// const BASE_URL = `https://borvey-backend-13d056a7e6c7.herokuapp.com/`;
 
 
 export const AxiosRequest = (method, url, data) => {
