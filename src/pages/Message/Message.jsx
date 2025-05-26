@@ -298,7 +298,7 @@ const Message = () => {
   }, []);
 
   const { messages, status, sendMessage } = useWebSocket(
-    `wss://borvey-backend-32b00d872bd0.herokuapp.com/connect?userId=${userInfo._id}`
+    `wss://borvey-backend-514fb2822e91.herokuapp.com/connect?userId=${userInfo._id}`
   );
 
   // const { messages, status, sendMessage } = useWebSocket(
