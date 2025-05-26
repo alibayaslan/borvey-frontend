@@ -2,7 +2,7 @@
 import axios from "axios";
 import { ApiRoutes } from "./ApiRoutes";
 // export const BASE_URL = "http://localhost:5050";
-const BASE_URL = "https://borvey-backend-three.vercel.app";
+const BASE_URL = "https://borvey-frontend-d2a7c9f8daa2.herokuapp.com/";
 
 
 export const AxiosRequest = (method, url, data) => {
