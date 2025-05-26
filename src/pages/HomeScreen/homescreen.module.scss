@@ -1,0 +1,45 @@
+@import "../../assets/style/variable.module.scss";
+
+.home {
+  margin-bottom: 180px; /* Yaklaşık 3 cm boşluk (96 DPI varsayımıyla) */
+  .lightWrapper {
+    width: 100%;
+    z-index: -1;
+    position: relative;
+    svg {
+      position: absolute;
+      &:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+
+      &:nth-child(2) {
+        top: 800px;
+        right: 0;
+      }
+
+      &:nth-child(3) {
+        top: 1950px;
+        left: 0;
+      }
+
+      &:nth-child(4) {
+        top: 2700px;
+        right: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .home {
+    width: 100vw;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    margin-bottom: 140px; /* Mobil görünüm için yaklaşık 2.1 cm boşluk (tahmini) */
+
+    .lightWrapper {
+      overflow-y: hidden;
+    }
+  }
+}

@@ -1,0 +1,169 @@
+@import "../../assets/style/variable.module.scss";
+
+.wrapper {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  .mainButton {
+    background: $--primary-orange;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 700;
+    color: white;
+
+    .iconWrapper {
+      background: rgba($color: white, $alpha: 0.4);
+      padding: 5px;
+      border-radius: 3px;
+    }
+  }
+
+  .workWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .workCard {
+    background: #fafafa;
+    width: 100%;
+    margin-top: 24px;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        .title {
+          display: flex;
+          align-items: center;
+          gap: 24px;
+
+          h6 {
+            font-weight: 800;
+            color: $--title-color;
+            font-size: 18px;
+          }
+
+          svg {
+            width: 30px;
+            height: 20px;
+          }
+        }
+
+        .badge {
+          display: flex;
+          gap: 10px;
+
+          span {
+            background: #efefef;
+            border: 1px solid #e6e6e6;
+            padding: 10px 12px;
+            font-size: 12px;
+            color: $--title-color;
+            border-radius: 8px;
+          }
+        }
+      }
+
+      .buttonWrapper {
+        display: flex;
+        gap: 12px;
+
+        button {
+          display: flex;
+          padding: 6px 12px;
+          gap: 8px;
+          font-weight: 700;
+          color: $--primary-blue;
+          font-size: 14px;
+          background: rgba($color: #00b8d9, $alpha: 0.08);
+          border-radius: 8px;
+
+          &:nth-child(2) {
+            color: $--error-color;
+            background: rgba($color: $--error-color, $alpha: 0.08);
+          }
+        }
+      }
+    }
+
+    .content {
+      p {
+        color: $--subtitle-color;
+        font-size: 16px;
+        font-weight: 400;
+        max-width: 800px;
+      }
+    }
+
+    .bottom {
+      display: flex;
+      gap: 12px;
+
+      .infoBadge {
+        padding: 6px 12px;
+        display: flex;
+        flex-direction: column;
+        background: #efefef;
+        border: 1px solid #e6e6e6;
+        border-radius: 8px;
+
+        h6 {
+          font-size: 12px;
+          color: $--subtitle-color;
+        }
+
+        p {
+          font-size: 14px;
+          color: $--primary-blue;
+          font-weight: 700;
+        }
+
+        &:nth-child(2) {
+          p {
+            color: $--primary-orange;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .wrapper {
+    .workCard {
+      .top {
+        flex-direction: column-reverse;
+        gap: 20px;
+
+        .buttonWrapper {
+          align-items: center;
+        }
+      }
+      .bottom {
+        flex-wrap: wrap;
+
+        .left {
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}

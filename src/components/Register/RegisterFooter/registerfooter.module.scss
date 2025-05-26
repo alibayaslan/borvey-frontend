@@ -1,0 +1,55 @@
+@import "../../../assets/style/variable.module.scss";
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 1.5vh;
+  left: 0;
+  width: 100%;
+  padding: 0 11.8vh;
+
+  p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #292929;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    li {
+      a {
+        color: #747474;
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+
+    .circle {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d9d9d9;
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .footer {
+    bottom: 20px;
+    position: static;
+    padding: 0;
+    flex-direction: column;
+    margin-top: 50px;
+
+    ul {
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 15px;
+    }
+  }
+}

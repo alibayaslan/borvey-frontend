@@ -1,0 +1,228 @@
+@import "../../../assets/style/variable.module.scss";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .selectionWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+
+    .selection {
+      width: 100%;
+      background: white;
+      border: 1px solid #d1d1d1;
+      border-radius: 12px;
+      display: flex;
+      padding: 24px;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      position: relative;
+      cursor: pointer;
+
+      .info {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        .circle {
+          width: 20px;
+          height: 20px;
+          min-width: 20px;
+          min-height: 20px;
+          border: 1px solid #d1d1d1;
+          border-radius: 50%;
+        }
+
+        h5 {
+          font-size: 14px;
+          max-width: 134px;
+          color: $--title-color;
+          line-height: 24px;
+          margin-top: -2px;
+        }
+      }
+
+      svg {
+        height: 30px;
+        width: auto;
+      }
+    }
+
+    .selected {
+      background: rgba($color: #ff9a00, $alpha: 0.06);
+
+      .info {
+        .circle {
+          position: relative;
+          background: $--primary-orange;
+          border: unset;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: white;
+          }
+        }
+      }
+    }
+  }
+
+  .right {
+    width: 100%;
+
+    form {
+      .inputWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      button {
+        width: 100%;
+        background: $--primary-orange;
+        color: white;
+        padding: 17px 0;
+        font-size: 18px;
+        font-weight: 700;
+        border-radius: 12px;
+        margin-top: 24px;
+      }
+    }
+  }
+
+  .bottom {
+    width: 40%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    background: rgba($color: #919eab, $alpha: 0.08);
+    padding: 24px;
+    box-sizing: border-box;
+    gap: 24px;
+    max-height: 60vh;
+
+    .workCard {
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border: 1px solid #e6e6e6;
+      padding: 24px;
+      box-sizing: border-box;
+      border-radius: 12px;
+      gap: 12px;
+
+      .titleWrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        .title {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          svg {
+            height: 20px;
+            width: auto;
+          }
+        }
+
+        .buttonWrapper {
+          display: flex;
+          gap: 12px;
+
+          button {
+            padding: 6px;
+            border-radius: 8px;
+
+            &:nth-child(1) {
+              background: rgba($color: #ff9a00, $alpha: 0.08);
+
+              svg {
+                path {
+                  fill: $--primary-orange;
+                }
+              }
+            }
+            &:nth-child(2) {
+              background: rgba($color: #b3261e, $alpha: 0.08);
+            }
+          }
+        }
+      }
+
+      .infoWrapper {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+
+        .infoCard {
+          padding: 6px 12px;
+          box-sizing: border-box;
+          background: #efefef;
+          border: 1px solid #e6e6e6;
+          border-radius: 8px;
+
+          h6 {
+            color: $--subtitle-color;
+            font-size: 12px;
+          }
+
+          p {
+            color: $--primary-blue;
+            font-size: 14px;
+          }
+        }
+
+        .singleInfo {
+          padding: 6px 12px;
+          box-sizing: border-box;
+          background: #efefef;
+          border: 1px solid #e6e6e6;
+          border-radius: 8px;
+          max-width: 180px;
+
+          p {
+            color: $--title-color;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .wrapper {
+    flex-direction: column;
+    .top {
+      .selectionWrapper {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .bottom {
+      width: 100%;
+    }
+  }
+}

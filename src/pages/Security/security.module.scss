@@ -1,0 +1,126 @@
+@import "../../assets/style/variable.module.scss";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 72vh;
+
+  .formContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    .formWrapper {
+      width: 40%;
+
+      h1 {
+        font-size: 24px;
+        color: $--title-color;
+        font-weight: 700;
+        margin-bottom: 24px;
+      }
+
+      form {
+        width: 100%;
+
+        .submit {
+          padding: 17px 75px;
+          color: white;
+          background: $--primary-blue;
+          font-size: 18px;
+          font-weight: 600;
+          border-radius: 12px;
+        }
+
+        .input {
+          width: 100%;
+        }
+
+        .inputWrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          align-items: flex-end;
+
+          .formSplit {
+            display: flex;
+            gap: 24px;
+            width: 100%;
+
+            .input {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+
+              span {
+                color: #b3261e;
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .deleteAccount {
+    width: 100%;
+    border: 1px solid #b3261e;
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 15vh;
+
+    div {
+      width: 100%;
+    }
+
+    h4 {
+      color: #b3261e;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: $--subtitle-color;
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    button {
+      background: #b3261e;
+      padding: 12px 42px;
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 8px;
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .wrapper {
+    flex-direction: column;
+    min-height: 100vh;
+    .formContainer {
+      flex-direction: column;
+      .formWrapper {
+        width: 100%;
+      }
+    }
+    .deleteAccount {
+      position: static;
+      margin-top: 50px;
+    }
+  }
+
+  .submit {
+    width: 100% !important;
+  }
+}

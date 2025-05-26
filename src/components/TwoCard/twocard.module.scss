@@ -1,0 +1,122 @@
+@import "../../assets/style/variable.module.scss";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.cardWrapper {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding: 36px;
+    box-sizing: border-box;
+    border-radius: 12px;
+        box-shadow: 6px 6px 18px 4px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 8px 8px 24px 6px rgba(0, 0, 0, 0.25);
+    }
+
+    .textWrapper {
+      text-align: left;
+
+      h5 {
+        color: #2c2c2c;
+        font-size: 24px;
+        font-weight: 800;
+        margin-bottom: 10px;
+        }
+
+      p {
+        color: #4f4f4f;
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 18px;
+        line-height: 1.6;
+      }
+    }
+
+    a {
+      padding: 11px 21px;
+      color: #ffffff;
+      border-radius: 8px;
+      margin-top: 24px;
+      cursor: pointer;
+      align-self: flex-end;
+      font-weight: 600;
+      transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out; /* Transform geçişi geri alındı */
+    }
+
+    a:hover {
+      background: inherit; /* Hoverda arka planı kartın rengine döndür */
+      transform: translateY(-3px); /* Orijinal hover efektini koru */
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .primary {
+    background: #dfeeff;
+    border: 1px solid #b2d6ff;
+
+    a {
+      background: #306fdf;
+      border: 2px solid #1e56c3; /* Daha kalın ve koyu çerçeve */
+      cursor: pointer;
+    }
+
+    a:hover {
+      border: 3px solid #1e56c3; /* Hoverda daha kalın çerçeve */
+      background-color: #245ac2; /* Hoverda hafifçe koyulaşan arka plan */
+    }
+  }
+
+  .secondary {
+    background: #fff5e0;
+    border: 1px solid #ffe1a1;
+
+    a {
+      background: #f59a13;
+      border: 2px solid #d97e0b; /* Daha kalın ve koyu çerçeve */
+      cursor: pointer;
+    }
+
+    a:hover {
+      border: 3px solid #d97e0b; /* Hoverda daha kalın çerçeve */
+      background-color: #d97e0b; /* Hoverda hafifçe koyulaşan arka plan */
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .cardWrapper {
+    max-width: 900px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .wrapper {
+    margin-top: 75px;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .cardWrapper {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .card {
+    align-items: flex-start; /* Mobil görünümde sola yasla */
+  }
+}

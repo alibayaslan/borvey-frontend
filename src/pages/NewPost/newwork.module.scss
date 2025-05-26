@@ -1,0 +1,38 @@
+@import "../../assets/style/variable.module.scss";
+
+.wrapper {
+  min-height: 65vh;
+  display: flex;
+
+  display: flex;
+  margin-top: 3.95vh;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  margin-top: 0;
+
+  .buttonWrapper {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    button {
+      font-size: 18px;
+      font-weight: 700;
+      padding: 17px 95px;
+      box-sizing: border-box;
+      border-radius: 12px;
+      border: 1px solid#d1d1d1;
+      background: white;
+      color: $--title-color;
+    }
+
+    .mainButton {
+      border: unset;
+      background: $--primary-blue;
+      color: white;
+    }
+  }
+}

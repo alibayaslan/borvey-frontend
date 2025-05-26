@@ -1,0 +1,122 @@
+@import "../../assets/style/variable.module.scss";
+
+.wrapper {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .seeAll {
+    background: $--primary-blue;
+    margin-top: 120px;
+    display: inline-flex; /* Blok yerine inline-flex yapıldı */
+    color: white;
+    gap: 8px;
+    align-items: center;
+    padding: 11px 90px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none; /* Bağlantı alt çizgisini kaldır */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Hover efekti için geçiş */
+
+    &:hover {
+      transform: translateY(-3px); /* Yukarı doğru hafifçe hareket etme */
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Daha belirgin gölge */
+    }
+  }
+  .cardWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1200px;
+    gap: 32px;
+
+    .card {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      /* Kart için genel geçişler kaldırıldı */
+    }
+
+    img {
+      height: 256px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 15px;
+      /* Görsel için hover efekti kaldırıldı */
+    }
+
+    .textWrapper {
+      background: white; /* Arka plan rengini beyaza çevirerek kontrastı artır */
+      border: 1px solid #e0e0e0; /* Daha belirgin bir kenarlık */
+      position: absolute;
+      width: calc(100% - 50px);
+      bottom: -80px;
+      border-radius: 6px;
+      padding: 24px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Daha belirgin gölge */
+      transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Metin kutusu için geçiş */
+    }
+
+    .textWrapper:hover {
+      transform: translateY(-5px); /* Metin kutusunu hafifçe yukarı kaydır */
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Metin kutusuna daha belirgin gölge ekle */
+    }
+
+    .textWrapper h5 {
+      text-align: center;
+      font-size: 16px;
+      color: #333; /* Daha koyu başlık rengi */
+      font-weight: 700;
+    }
+
+    .textWrapper h5:last-child { /* Tür bilgisinin rengi */
+      color: $--primary-orange; /* Değişkeni koru */
+    }
+
+    .textWrapper p {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 14px;
+      line-height: 150%;
+      min-height: 100px;
+      max-height: 100px;
+      color: #555; /* Daha koyu açıklama rengi */
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .wrapper {
+    .cardWrapper {
+      max-width: 900px;
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .wrapper {
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-top: 75px;
+
+    .cardWrapper {
+      grid-template-columns: 1fr;
+      gap: 70px;
+
+      .card {
+        .textWrapper {
+          bottom: -40px;
+        }
+      }
+    }
+
+    .seeAll {
+      margin-top: 80px;
+    }
+  }
+}

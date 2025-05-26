@@ -1,0 +1,138 @@
+@import "../../assets/style/variable.module.scss";
+
+.container {
+  position: relative;
+}
+
+.notificationButton {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #e6e6e6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #efefef;
+
+  .count {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: $--primary-orange;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -5px;
+    top: -5px;
+  }
+}
+
+.popup {
+  position: absolute;
+  width: 420px;
+  top: 55px;
+  right: 0;
+  background: white;
+  border: 1px solid #dadada;
+  border-radius: 24px;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0px 0px 35px rgba($color: #c2c2c2, $alpha: 0.4);
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dadada;
+
+    p {
+      font-size: 18px;
+      color: $--title-color;
+      font-weight: 600;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    max-height: 250px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+
+    h6 {
+      width: 100%;
+      padding: 75px 0;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      text-align: center;
+      color: $--primary-blue;
+      font-weight: 600;
+    }
+
+    .notification {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      padding: 20px 24px;
+      box-sizing: border-box;
+      position: relative;
+
+      .dot {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        left: 20px;
+        top: 20px;
+        border-radius: 50%;
+        background: $--primary-blue;
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h5 {
+          color: $--title-color;
+          font-weight: 500;
+        }
+
+        p {
+          color: #919eab;
+          font-size: 12px;
+        }
+      }
+
+      &:not(:first-child) {
+        border-top: 1px dashed #dadada;
+      }
+    }
+  }
+}
+
+.personalWrapper {
+  .notificationButton {
+    .count {
+      background: $--primary-blue;
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .container {
+    position: static;
+  }
+
+  .popup {
+    top: 120px;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

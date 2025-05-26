@@ -1,0 +1,57 @@
+@import "../../assets/style/variable.module.scss";
+
+.emailCheck {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 200px;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    border-radius: 10px;
+
+    h5 {
+      font-size: 24px;
+      color: white;
+      font-weight: 600;
+    }
+  }
+
+  .loading {
+    background: rgba($color: $--primary-blue, $alpha: 0.8);
+  }
+
+  .success {
+    background: rgba($color: #34c759, $alpha: 0.2);
+
+    h5 {
+      margin-top: 10px;
+      color: #34c759;
+    }
+
+    svg {
+      height: 100px;
+      width: auto;
+    }
+  }
+
+  .error {
+    background: rgba($color: #b3261e, $alpha: 0.2);
+
+    h5 {
+      margin-top: 10px;
+      color: #b3261e;
+    }
+
+    svg {
+      height: 100px;
+      width: auto;
+    }
+  }
+}

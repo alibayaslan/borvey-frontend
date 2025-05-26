@@ -1,0 +1,139 @@
+@import "../../assets/style/variable.module.scss";
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba($color: $--primary-blue, $alpha: 0.6);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+
+  .card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+
+    .titleWrapper {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px;
+
+      h5 {
+        font-size: 18px;
+        color: $--title-color;
+      }
+    }
+
+    .avatar {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 12px 48px;
+      border: 1px solid #e6e6e6;
+      border-radius: 8px;
+      margin-bottom: 24px;
+      margin-left: 24px;
+      margin-right: 24px;
+
+      h6 {
+        color: $--title-color;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+        border: 1px solid #e6e6e6;
+      }
+    }
+
+    h3 {
+      font-size: 16px;
+      color: $--title-color;
+      text-align: center;
+    }
+
+    .starWrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 12px;
+      margin-bottom: 24px;
+
+      span {
+        cursor: pointer;
+        svg {
+          width: 40px;
+          height: 40px;
+
+          path {
+            fill: #919eab;
+          }
+        }
+      }
+
+      .active {
+        svg {
+          path {
+            fill: $--primary-orange;
+          }
+        }
+      }
+    }
+
+    textarea {
+      width: 550px;
+      height: 176px;
+      border: 1px solid rgba($color: #919eab, $alpha: 0.2);
+      resize: none;
+      border-radius: 8px;
+      padding-top: 16px;
+      padding-left: 14px;
+      margin-bottom: 24px;
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+
+    .buttonWrapper {
+      background: #f5f5f5;
+      width: 100%;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+
+      button {
+        padding: 12px 24px;
+        font-size: 14px;
+        color: $--title-color;
+        font-weight: 700;
+        border: 1px solid #d0d5dd;
+        background: white;
+        border-radius: 8px;
+
+        &:nth-child(2) {
+          background: $--primary-blue;
+          border: 1px solid transparent;
+          color: white;
+        }
+      }
+    }
+  }
+}
